@@ -5,7 +5,7 @@ phases:
         python: 3.7 
   build: 
     commands: 
-      - export BUCKET=lambda-deployment-artifacts-rizwan 
+      - export BUCKET=test 
       - aws cloudformation package --template-file SAM_Template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yml 
 artifacts: 
   type: zip 
